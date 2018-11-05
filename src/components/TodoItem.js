@@ -1,5 +1,5 @@
 import React,{Component} from 'react'
-
+import './TodoItem.css'
 //text: todo 내용
 //checked: 체크박스 상태
 //id: todo 의 고유 아이디
@@ -13,7 +13,7 @@ import React,{Component} from 'react'
 
 class TodoItem extends Component{
     
-    
+
     render(){
         const{text,checked,id, onToggle,onRemove } =this.props;
         return (
