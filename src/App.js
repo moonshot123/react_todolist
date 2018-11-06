@@ -24,6 +24,8 @@ class App extends Component {
   }
 
   handleChange = (e) => {
+    console.log("handleChange e 확인 : "+e)
+    console.log("handleChange e.target.value 확인 : "+e.target.value)
     this.setState({
       input: e.target.value
     });
@@ -46,6 +48,7 @@ class App extends Component {
 
   handleKeyPress = (e) => {
     if(e.key === 'Enter') {
+      console.log("handleKeyPress e 확인"+e)
       this.handleCreate();
     }
   }
@@ -57,6 +60,11 @@ class App extends Component {
 
     const selected = todos[index];
 
+    console.log("handleToggle id"+id)
+    console.log("handleToggle todos"+todos)
+    console.log("handleToggle index"+index)
+    console.log("handleToggle selected"+selected)
+    
     this.setState({
       todos: [
         ...todos.slice(0, index),
@@ -71,7 +79,12 @@ class App extends Component {
 
 
   handleRemove = (id) => {
+
     const { todos } = this.state;
+
+    console.log("handleRemove id"+id)
+    console.log("handleTemove totos"+todos)
+
     this.setState({
       todos: todos.filter(todo => todo.id !== id)
     });
@@ -79,8 +92,10 @@ class App extends Component {
 
   
   render() {
-
+    
     const {input, todos} = this.state;
+    console.log("render input"+input)
+    console.log("render todos"+todos)
 
     const {
       handleChange,
