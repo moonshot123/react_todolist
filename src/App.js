@@ -4,11 +4,25 @@ import TodolistTemplate from './components/TodolistTemplate';
 import Form from './components/Form'
 import TodoItemList from './components/TodoItemList';
 
+/* 
+App.js 기능
+1. 데이터를 받음 
+2. 데이터를 가져오기떄문에 변경도 여기서 해야됨, 
+그래서 함수를 선언하고 함수를 자식클래스가 사용할수 있도록
+보내줘야함 
+3.자식클래스에서 이벤트 발생하면 랜더를 한번 돌리면서 필요한 기능을 하는 식으로 개발하는듯
+
+
+
+*/
+
+
+
 
 
 // main
 // list
-// 이모티콘 그냥 이미지 넣기 하면 들어감....
+// 이미지는 바로 경로를 입력하면 안되고 import해줘야함
 
 class App extends Component {
 
